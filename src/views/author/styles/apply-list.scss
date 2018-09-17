@@ -1,0 +1,31 @@
+@include b(apply-list) {
+  height: 100%;
+
+  @include b(main) {
+    @include e(header) {
+      line-height: 32px;
+      margin-bottom: 10px;
+      @include b(main__action) {
+        display: flex;
+        float: right;
+        @include m(button) {
+          margin-right: 10px;
+        }
+      }
+    }
+
+    @include e(section) {
+      background: #fff;
+      @include b(table) {
+        position: relative;
+        padding: 10px;
+      }
+    }
+  }
+}
+
+
+
+
+
+

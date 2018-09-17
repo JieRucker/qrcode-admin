@@ -1,0 +1,51 @@
+
+.auth-list {
+  height: 100%;
+  @include b(tree) {
+    width: 200px;
+    height: 100%;
+    position: fixed;
+    background: #fff;
+    box-shadow: 0 2px 1px 1px rgba(100, 100, 100, 0.1);
+    @include m(title) {
+      height: 55px;
+      padding-left: 16px;
+      background-color: #f8f8f8;
+      font-size: 16px;
+      line-height: 55px;
+    }
+    @include m(button) {
+      position: absolute;
+      right: 15px;
+      top: 17px;
+    }
+  }
+
+  @include b(main) {
+    padding-left: 210px;
+    @include e(header) {
+      line-height: 32px;
+      margin-bottom: 10px;
+      @include b(main__tip) {
+        float: left;
+      }
+      @include b(main__action) {
+        display: flex;
+        float: right;
+      }
+    }
+
+    @include e(section) {
+      background: #fff;
+      @include b(table) {
+        position: relative;
+        padding: 10px;
+      }
+    }
+  }
+}
+
+
+
+
+

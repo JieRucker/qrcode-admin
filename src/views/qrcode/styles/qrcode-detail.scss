@@ -1,0 +1,132 @@
+@import "./mixin/mixin.scss";
+
+.qrcode-detail {
+  @include e(panel) {
+    margin-top: 40px;
+    width: 1000px;
+    background: none;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @include e(left) {
+    float: left;
+    @include b(classify-box) {
+      min-height: 90px;
+      border-top: 0;
+      background-color: #fff;
+      margin-bottom: 10px;
+      font-size: 14px;
+      word-wrap: break-word;
+      position: relative;
+      cursor: pointer;
+      @include b(empty-block) {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        @include b(module-icon-box) {
+          margin-top: -38px;
+          width: 78px;
+          height: 78px;
+          top: 50%;
+          position: absolute;
+          font-size: 12px;
+          text-align: center;
+          @include b(i-icon) {
+            font-size: 35px;
+            color: #999;
+          }
+          @include b(module-text) {
+            display: block;
+            margin-top: -6px;
+            font-size: 12px;
+            text-align: center;
+            color: #999;
+          }
+        }
+        @include b(operate) {
+          @include m(name) {
+            position: absolute;
+            top: 50%;
+            margin-top: -10px;
+            left: 78px;
+          }
+          @include m(btn) {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+          }
+        }
+      }
+    }
+  }
+
+  @include e(header) {
+    width: 320px;
+    height: 55px;
+    background: url(http://static.clewm.net/static/images/pro/wechat_top@1x_d8966b5.png) no-repeat;
+    position: relative;
+    cursor: pointer;
+
+    @include m(title) {
+      position: absolute;
+      width: 220px;
+      height: 25px;
+      top: 25px;
+      left: 58px;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      font-size: 15px;
+      color: #fff;
+      text-align: center;
+    }
+  }
+
+  @include e(section) {
+    margin-bottom: 50px;
+    margin-top: 10px;
+    margin-right: 50px;
+    width: 320px;
+    border-radius: 10px;
+    border: 0;
+    background-color: transparent;
+    box-shadow: none;
+    @include m(title) {
+      width: 100%;
+      margin-bottom: 10px;
+      border: 1px dashed #e4e4e4;
+      background-color: #fff;
+      text-align: center;
+      height: 40px;
+      line-height: 40px;
+      font-size: 14px;
+    }
+  }
+
+  @include e(right) {
+    float: left;
+  }
+}
+
+.editor-panel {
+  background-color: #fff;
+  .ql-toolbar {
+    &.ql-snow {
+      border: 1px solid #dddee1;
+      border-top-left-radius: 4px;
+      border-top-right-radius: 4px;
+      .ql-formats {
+        margin-right: 5px;
+      }
+    }
+  }
+  .ql-container {
+    min-height: 200px;
+    &.ql-snow {
+      border: 1px solid #dddee1;
+      border-bottom-left-radius: 4px;
+      border-bottom-right-radius: 4px;
+    }
+  }
+}

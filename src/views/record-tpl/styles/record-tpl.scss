@@ -1,0 +1,85 @@
+@include b(record-tpl-list) {
+  height: 100%;
+
+  @include b(main) {
+    @include e(header) {
+      line-height: 32px;
+      margin-bottom: 10px;
+      @include b(main__tip) {
+        float: left;
+        @include m(title) {
+          font-size: 14px;
+          font-weight: 700;
+        }
+      }
+      @include b(main__action) {
+        display: flex;
+        float: right;
+      }
+    }
+
+    @include e(section) {
+      @include b(card) {
+        @include b(l-list) {
+          @include e(item) {
+            float: left;
+            padding-right: 10px;
+            margin-bottom: 10px;
+            .ivu-card-body {
+              min-height: 155px;
+            }
+            &:last-child {
+              margin-right: 0;
+            }
+            @include m(name) {
+              font-size: 18px;
+              font-weight: 500;
+              @include text-overflow();
+            }
+            @include m(remark) {
+              margin: 5px 0;
+              @include text-overflow();
+            }
+            @include m(date) {
+              color: #999;
+              @include text-overflow();
+            }
+          }
+          @include e(footer) {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            padding-right: 25px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            @include m(icon) {
+              font-size: 14px;
+              vertical-align: middle;
+              cursor: pointer;
+              span {
+                display: inline-block;
+                width: 14px;
+                height: 14px;
+                line-height: 14px;
+                text-align: center;
+                color: #bbb;
+              }
+            }
+            @include b(calendar-l-list) {
+              @include e(item) {
+                padding: 6px 5px;
+                cursor: pointer;
+                font-size: 14px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+

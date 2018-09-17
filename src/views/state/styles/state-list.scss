@@ -1,0 +1,58 @@
+@include b(state-list) {
+  height: 100%;
+
+  @include b(main) {
+    @include e(header) {
+      line-height: 32px;
+      margin-bottom: 10px;
+      @include b(main__tip) {
+        float: left;
+        @include m(title) {
+          font-size: 14px;
+          font-weight: 700;
+        }
+      }
+      @include b(main__action) {
+        display: flex;
+        float: right;
+      }
+    }
+
+    @include e(section) {
+      @include b(card) {
+        @include b(l-list) {
+          @include e(item) {
+            float: left;
+            padding-right: 10px;
+            margin-bottom: 10px;
+            .ivu-card-body {
+              height: 155px;
+              overflow-y: auto;
+            }
+            &:last-child {
+              margin-right: 0;
+            }
+            @include m(tag) {
+              border: 0 !important;
+              display: block;
+            }
+            @include m(edit) {
+              font-size: 16px;
+              margin-right: 5px;
+              cursor: pointer;
+            }
+            @include m(trash) {
+              font-size: 16px;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+

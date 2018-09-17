@@ -1,0 +1,64 @@
+.card-detail {
+  @include e(panel) {
+    margin-top: 40px;
+    width: 1000px;
+    background: none;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @include e(left) {
+    float: left;
+  }
+
+  @include e(header) {
+    width: 320px;
+    height: 55px;
+    background: url(http://static.clewm.net/static/images/pro/wechat_top@1x_d8966b5.png) no-repeat;
+    position: relative;
+    cursor: pointer;
+
+    @include m(title) {
+      position: absolute;
+      width: 220px;
+      height: 25px;
+      top: 25px;
+      left: 58px;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      font-size: 15px;
+      color: #fff;
+      text-align: center;
+    }
+  }
+
+  @include e(section) {
+    margin-bottom: 50px;
+    margin-right: 50px;
+    width: 320px;
+    border-radius: 10px;
+    border: 0;
+    background-color: transparent;
+    box-shadow: none;
+    @include m(title) {
+      width: 100%;
+      margin-bottom: 10px;
+      border: 1px dashed #e4e4e4;
+      background-color: #fff;
+      text-align: center;
+      height: 40px;
+      line-height: 40px;
+      font-size: 14px;
+    }
+  }
+
+  @include e(footer) {
+    display: flex;
+    margin: 10px 5px;
+  }
+
+  @include e(right) {
+    float: left;
+  }
+}
